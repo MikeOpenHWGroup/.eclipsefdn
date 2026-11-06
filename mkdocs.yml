@@ -1,11 +1,11 @@
-site_name: Otterdog configuration @ {{ org }}
-site_description: Otterdog configuration @ {{ org }}
+site_name: Otterdog configuration @ openhwfoundation
+site_description: Otterdog configuration @ openhwfoundation
 strict: false
 
-site_url: https://{{ org }}.github.io/.eclipsefdn/
+site_url: https://openhwfoundation.github.io/.eclipsefdn/
 
-repo_name: {{ org }}/.eclipsefdn
-repo_url: https://github.com/{{ org }}/.eclipsefdn/
+repo_name: openhwfoundation/.eclipsefdn
+repo_url: https://github.com/openhwfoundation/.eclipsefdn/
 
 docs_dir: ./docs
 site_dir: ./_site
@@ -34,7 +34,7 @@ nav:
 watch: []
 
 extra:
-  org_id: {{ org }}
+  org_id: openhwfoundation
 
 extra_css:
   - stylesheets/extra.css
