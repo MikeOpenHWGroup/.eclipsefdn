@@ -859,14 +859,15 @@ orgs.newOrg('openhw', 'openhwfoundation') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('cva6') {
+      allow_merge_commit: true,
       allow_auto_merge: true,
       allow_update_branch: false,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "The CORE-V CVA6 is a highly configurable, 6-stage RISC-V core for both application and embedded applications. Application class configurations are capable of booting Linux.",
       gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "master",
+      gh_pages_source_branch: "main",
       gh_pages_source_path: "/docs",
       has_discussions: true,
       homepage: "https://docs.openhwgroup.org/projects/cva6-user-manual/",
@@ -905,20 +906,6 @@ orgs.newOrg('openhw', 'openhwfoundation') {
             "push"
           ],
           secret: "********",
-        },
-        orgs.newRepoWebhook('https://gitlab.thales-invia.fr/api/v4/projects/14/ref/master/trigger/pipeline?token=82c59d86d75bcb0fbe379a09c7a252') {
-          content_type: "json",
-          events+: [
-            "pull_request",
-            "push"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://gitlab.thales-invia.fr/api/v4/projects/14/ref/master/trigger/pipeline?token=glptt-0e7ecb60e7a513a6f8687c86f17c3b5b2a2df92a') {
-          events+: [
-            "pull_request",
-            "push"
-          ],
         },
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/cva6-master/294369/') {
           content_type: "json",
