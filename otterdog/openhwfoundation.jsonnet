@@ -621,6 +621,9 @@ orgs.newOrg('openhw', 'openhwfoundation') {
       web_commit_signoff_required: false,
       rulesets: [
         orgs.newRepoRuleset('Copilot review for default branch') {
+          copilot_code_review: orgs.newCopilotCodeReview() {
+            review_on_push: true,
+          },
           allows_creations: true,
           include_refs+: [
             "~DEFAULT_BRANCH"
